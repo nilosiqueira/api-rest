@@ -2,8 +2,10 @@ const express = require('express')
 
 const routes = express.Router()
 
-const UserConstroller = require('./app/controllers/UserController')
+const UserController = require('./app/controllers/UserController')
+const SessionController = require('./app/controllers/SessionController')
 
-routes.post('/users', UserConstroller.store)
+routes.post('/users', UserController.store)
+routes.post('/sessions', SessionController.store)
 
 module.exports = routes
